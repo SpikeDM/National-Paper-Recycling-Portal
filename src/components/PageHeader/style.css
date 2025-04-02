@@ -1,0 +1,76 @@
+.page-header {
+	padding: 25px 58px;
+	box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	display: flex;
+	justify-content: space-between;
+	gap: 32px;
+	align-items: center;
+	position: relative;
+	z-index: 3;
+	flex-wrap: wrap;
+
+	& .page-title {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		max-width: 400px;
+
+		& svg {
+			font-size: 22px;
+			color: #ffb500;
+		}
+
+		& h1 {
+			margin: 0;
+			font-size: 30px;
+
+			@media only screen and (max-width: 600px) {
+				& strong {
+					display: block;
+					font-size: 19px;
+				}
+			}
+		}
+	}
+
+	& > div:last-child {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+
+		@media only screen and (max-width: 600px) {
+			gap: 5px;
+		}
+	}
+
+	@media only screen and (max-width: 600px) {
+		flex-direction: column;
+		gap: 15px;
+		align-items: flex-start;
+
+		& > * {
+			width: 100%;
+		}
+
+		& .page-title {
+			align-items: flex-start;
+
+			& svg {
+				top: 10px;
+				position: relative;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1030px) {
+	.page-header {
+		padding-inline: 24px;
+
+		& .page-title h1 {
+			font-size: 28px;
+		}
+	}
+}

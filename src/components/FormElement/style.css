@@ -1,0 +1,100 @@
+.form-element {
+	display: block;
+}
+
+.form-element label {
+	font-weight: bold;
+	display: block;
+	text-align: left;
+	margin-bottom: 10px;
+	color: var(--text);
+	font-size: 14px;
+
+	&:has(+ small) {
+		margin-bottom: 5px;
+	}
+	& + small {
+		margin-bottom: 10px;
+		display: block;
+	}
+}
+
+.form-element .form-prefixed,
+.form-element input:where([type="text"], [type="search"], [type="email"], [type="password"], [type="number"]),
+.form-element textarea,
+.form-element select {
+	width: 100%;
+	display: block;
+	padding: 16px 18px 16px 18px;
+	box-sizing: border-box;
+	box-shadow: 3px 3px 1px 1px rgb(225, 226, 227);
+	border: 1px solid rgb(216, 216, 216);
+	font-size: 14px;
+}
+
+.form-element select {
+	appearance: none;
+	padding-right: 32px;
+	background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2714%27 height=%278%27 fill=%27none%27%3E%3Cpath fill=%27%23000%27 d=%27m12.934 1.344-.52-.547c-.137-.137-.355-.137-.465 0L7 5.747 2.023.796C1.914.66 1.695.66 1.56.797l-.52.547c-.137.11-.137.328 0 .465l5.715 5.714a.315.315 0 0 0 .465 0l5.715-5.714c.136-.137.136-.356 0-.465z%27/%3E%3C/svg%3E) !important;
+	background-position: calc(100% - 16px) 50% !important;
+	background-repeat: no-repeat !important;
+}
+
+.form-element .form-prefixed {
+	display: flex;
+	gap: 5px;
+
+	&:focus-within {
+		outline: -webkit-focus-ring-color auto 1px;
+	}
+	& > span {
+		font-size: 14px;
+		line-height: 1;
+	}
+	& input:where([type="text"], [type="search"], [type="email"], [type="password"], [type="number"]),
+	& texteara {
+		padding: 0;
+		box-shadow: none;
+		border: none;
+
+		outline: none !important;
+	}
+}
+
+.form-element .error {
+	text-align: left;
+	color: var(--error);
+	font-size: 14px;
+	margin-top: 8px;
+}
+
+.form-element + .form-element {
+	margin-top: 24px;
+}
+
+.form-element .select-suggest {
+	z-index: 98;
+	& input[type="text"] {
+		box-shadow: none;
+		border: none;
+	}
+
+	& > div {
+		border: none !important;
+	}
+}
+
+.form-element .react-datepicker-wrapper {
+	width: 100%;
+}
+
+.form-element .customer-notes {
+	font-size: 14px;
+	margin-top: 15px;
+	max-height: 200px;
+	overflow: auto;
+	& strong {
+		display: block;
+		margin-bottom: 3px;
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"name": "Portal",
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"core/": true,
+			"**/.DS_Store": true
+		}
+	}
+}

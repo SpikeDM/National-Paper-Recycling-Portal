@@ -1,13 +1,112 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	--text-x-light: rgba(1, 21, 51, 0.3);
+	--text-light: rgba(1, 21, 51, 0.6);
+	--text: rgb(29, 45, 53);
+
+	--orange: rgb(226, 112, 23);
+	--dark-orange: #c86211;
+
+	--background: rgb(245, 247, 242);
+
+	--error: #e24117;
+
+	height: 100svh;
+	overflow: hidden;
+	color: var(--text-light);
+	line-height: 1.4;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+#root {
+	position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--text);
+}
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	padding: 14px 20px 14px 20px;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 16px;
+	box-sizing: border-box;
+	transition: ease-in-out all 0.2s;
+}
+
+.button:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.button.primary {
+	background: var(--orange);
+	color: #fff;
+}
+
+.button.primary:where(:hover, :focus-visible) {
+	background: var(--dark-orange);
+}
+
+.button.secondary {
+	background: var(--background);
+	color: var(--text);
+}
+
+.button.secondary:where(:hover, :focus-visible) {
+	background: #e7e7e6;
+}
+
+.button.text {
+	background: transparent;
+	color: var(--text);
+}
+
+.button.text:where(:hover, :focus-visible) {
+	color: var(--orange);
+}
+
+.radio-item,
+.checkbox-item {
+	display: flex !important;
+	gap: 10px;
+	align-items: center;
+
+	& > strong {
+		order: 2;
+		line-height: 1;
+	}
+	& input {
+		margin: 0;
+	}
+}
+input[type="radio"],
+input[type="checkbox"] {
+	width: 20px;
+	height: 20px;
+	border: 1px solid rgba(1, 21, 51, 0.3);
+	border-radius: 4px;
+	background: rgba(255, 255, 255, 0.2);
+}
+
+input[type="radio"] {
+	border-radius: 50%;
 }

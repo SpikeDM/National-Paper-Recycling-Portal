@@ -1,0 +1,55 @@
+.user-footer.modal-footer {
+	padding-top: 58px;
+}
+
+.form-repeater-phone {
+	& > div {
+		flex-grow: 1;
+		flex-basis: 100%;
+	}
+	@media only screen and (min-width: 600px) {
+		& .phone-field-type {
+			max-width: 120px;
+		}
+	}
+	& select {
+		width: 100%;
+	}
+}
+
+.user-form header {
+	display: flex;
+	gap: 15px;
+	align-items: center;
+	padding-bottom: 20px;
+
+	& h2 {
+		flex-grow: 1;
+		flex-shrink: 1;
+		margin: 0;
+		font-size: 32px;
+	}
+
+	& button {
+		background: transparent;
+		border: none;
+		font-size: 16px;
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		cursor: pointer;
+	}
+
+	@media only screen and (max-width: 600px) {
+		flex-wrap: wrap;
+		flex-direction: column;
+		& h2 {
+			width: 100%;
+			order: 2;
+			font-size: 24px;
+		}
+		& button {
+			align-self: flex-end;
+		}
+	}
+}

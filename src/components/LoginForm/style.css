@@ -1,0 +1,30 @@
+.login-form {
+	text-align: center;
+	display: flex;
+	align-items: safe center;
+	justify-content: center;
+	height: 100svh;
+	background: var(--background);
+	padding: 100px 5%;
+	box-sizing: border-box;
+	overflow: auto;
+	width: 100%;
+}
+
+.login-form img {
+	width: 320px;
+	height: auto;
+	max-width: 90%;
+}
+
+.login-form > div {
+	width: 400px;
+}
+
+.login-form form {
+	margin-top: 42px;
+}
+
+.login-form button {
+	width: 100%;
+}

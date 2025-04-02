@@ -1,0 +1,35 @@
+.bulk-actions {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	& > * {
+		flex-shrink: 0;
+	}
+	@media only screen and (max-width: 1170px) {
+		width: 100%;
+		justify-content: center;
+	}
+
+	@media only screen and (max-width: 400px) {
+		& button:has(svg):not(:has(svg.fa-square-check)) {
+			font-size: 0;
+			justify-content: center;
+			text-align: center;
+			gap: 0;
+			padding-inline: 15px;
+			& svg {
+				font-size: 14px;
+			}
+		}
+		& button:has(.fa-square-check) {
+			font-size: 14px;
+		}
+	}
+}
+
+& div:has(.bulk-actions) {
+	@media only screen and (max-width: 1170px) {
+		width: 100%;
+	}
+}
