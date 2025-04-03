@@ -2,6 +2,20 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Requirements
+
+Node, Git, NPM
+
+## Setup
+
+1. Create a new folder for the files to live.
+2. Clone the git repository into the new folder. `git clone https://github.com/TheDigitalDuck/National-Paper-Recycling-Portal.git`
+3. Install the dependancies `npm i`
+4. Run the test environment `npm start`
+5. Once you're happy with the changes build the project `npm run build`
+6. Upload the contents of `/build` to the server. (Make sure Note to delete the .htaccess file on the server).
+7. Push the changes to github `git add *` then `git commit -m "Your message here"` then `git push origin`.
+
 ## Available Scripts
 
 In the project directory, you can run:
