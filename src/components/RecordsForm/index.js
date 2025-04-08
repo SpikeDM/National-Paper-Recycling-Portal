@@ -141,7 +141,7 @@ const Form = ({ record, settings, showFormModal, functions, setSettings, items }
 					/>
 				</FormElement>
 				<FormElement id="invoice_number" label="Invoice Number" errors={errors}>
-					<input type="number" id="invoice_number" {...register("invoice_number")} />
+					<input type="text" id="invoice_number" {...register("invoice_number")} />
 				</FormElement>
 			</div>
 			<hr />
@@ -187,7 +187,7 @@ const Form = ({ record, settings, showFormModal, functions, setSettings, items }
 					</div>
 				</FormElement>
 				<FormElement id="transport_invoice_number" label="Transport Invoice #" errors={errors}>
-					<input type="number" id="transport_invoice_number" {...register("transport_invoice_number")} />
+					<input type="text" id="transport_invoice_number" {...register("transport_invoice_number")} />
 				</FormElement>
 			</div>
 			<div className="modal-footer user-footer">

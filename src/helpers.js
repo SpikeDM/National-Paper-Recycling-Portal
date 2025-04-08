@@ -28,7 +28,7 @@ export const recordColumns = [
 	{ label: "Date", value: "date" },
 	{ label: "Company Name", value: "company_name" },
 	{ label: "Location", value: "location" },
-	{ label: "Invoice #", value: "invoice" },
+	{ label: "Invoice #", value: "invoice_number" },
 	{ label: "Type", value: "type" },
 	{ label: "Weight", value: "weight" },
 	{ label: "Price", value: "price" },
